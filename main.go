@@ -12,7 +12,7 @@ import (
 func main() {
   port, err := strconv.Atoi(os.Getenv("PORT"))
   if err == nil {
-    beego.BConfig.Listen.HTTPPort = port //set port
+    beego.BConfig.Listen.HTTPPort = port
   }
 	beego.Run()
 }
