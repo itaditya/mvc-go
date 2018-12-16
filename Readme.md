@@ -11,4 +11,5 @@ Resources on how to build complete Golang applications are scarce and not easily
 1. Clone this project in a folder outside `GOPATH` (because we are using Go Modules).
 1. `cd` into the project.
 1. Install all dependencies with `go get -u`.
+1. Rename `.env.example` to `.env` and provide the necessary information like Database URI etc.
 1. Start server with `bee run`.
