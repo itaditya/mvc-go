@@ -1,7 +1,0 @@
-{
-    "version": 2,
-    "name": "mvc-go",
-    "builds": [
-        { "src": "*.go", "use": "@now/go" }
-    ]
-}
