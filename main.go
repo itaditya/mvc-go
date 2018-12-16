@@ -3,18 +3,17 @@ package main
 import (
   _ "github.com/joho/godotenv/autoload"
   _ "mvc-go/routers"
-  models "mvc-go/models"
-  "github.com/astaxie/beego/orm"
+  _ "mvc-go/models"
 	"github.com/astaxie/beego"
+  "strconv"
+  "os"
 )
 
-var ORM orm.Ormer
-
-func init() {
-  ORM = models.GetOrmObject()
-}
-
 func main() {
+  port, err := strconv.Atoi(os.Getenv("PORT"))
+  if err == nil {
+    beego.BConfig.Listen.HTTPPort = port
+  }
 	beego.Run()
 }
 
